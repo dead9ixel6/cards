@@ -1,27 +1,43 @@
-# EzAss
+# EZ-Assi Cards Management System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
+## Description
 
-## Development server
+This project is an Angular-based web application integrated with a NodeJS backend and a MariaDB database. It features a responsive design, infinite scrolling, and full CRUD capabilities.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Setup and Installation
 
-## Code scaffolding
+### Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js and npm installed
+- Angular CLI installed (`npm install -g @angular/cli`)
+- MariaDB or MySQL installed
 
-## Build
+### Database Setup
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Start your MariaDB server.
+2. Run the `MariaScript.sql` script to create the database and initial tables:
 
-## Running unit tests
+### Server Setup
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Navigate to the `server` directory.
+2. Install dependencies: `npm install`.
+3. Start the server: `node index.js`.
 
-## Running end-to-end tests
+### Frontend Setup
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+1. From the root directory, install Angular dependencies: `npm install`.
+2. Serve the Angular application: `ng serve`.
+3. Open `http://localhost:4200` in your browser.
 
-## Further help
+## Features
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **Create New Card**: Click the "Add Card" button.
+- **Edit Card**: Edit by clicking the edit icon.
+- **Delete Card**: Remove by clicking the delete icon.
+- **Infinite Scroll**: Scroll down to load more cards. If it doesn't work, try scrolling up slightly then down again.
+
+## Testing
+
+Use Postman or a similar tool to test API endpoints.
+
+There is a collection in the root folder named cards.postman_collection.json you can use to import with postman.

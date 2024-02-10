@@ -1,0 +1,21 @@
+<div
+  infiniteScroll
+  [infiniteScrollDistance]="0.8"
+  [infiniteScrollUpDistance]="2"
+  [infiniteScrollThrottle]="300"
+  (scrolled)="onScroll()"
+>
+  <div *ngFor="let card of cards">
+    <app-card-view
+      [card]="card"
+      (save)="updateCard($event)"
+      (delete)="deleteCard($event)"
+    >
+    </app-card-view>
+  </div>
+</div>
+<span class="button">
+  <button mat-raised-button color="primary" (click)="addCard()">
+    Add Card
+  </button>
+</span>

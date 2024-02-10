@@ -1,0 +1,48 @@
+<mat-card class="custom-card" >
+    <div class="card-content" *ngIf="!editMode">
+      <div class="card-text-content">
+        <div class="card-header">
+          <mat-icon>assignment</mat-icon>
+          <span class="card-title">{{card.assignees}}</span>
+            <mat-icon (click)="toggleEditMode()" >edit</mat-icon>
+            <mat-icon (click)="deleteCard()">delete</mat-icon>
+        </div>
+        <div class="card-image-summary">
+            <div class="card-image">
+                <img [src]="imagePath" alt="No Image Uploaded" />
+              </div>
+          <p class="idea-summary">{{card.ideaSummary}}</p>
+        </div>
+        <div class="card-body-text">
+          <a href="#" class="link">Workflow</a>
+          <a href="#" class="link">Idea Review/PLM II</a>
+          <a href="#" class="link review-score">Review Score</a>
+        </div>
+        <div class="card-footer">
+          <mat-icon>star_border</mat-icon>
+          <span>Posted by Anonymous User on June 27, 2019, 12:00 PM</span>
+        </div>
+      </div>
+   
+    </div>
+
+    <div class="card-content" *ngIf="editMode">
+        <div class="card-text-content">
+          <div class="card-header">
+            <mat-icon>assignment</mat-icon>
+            <input [(ngModel)]="card.assignees" class="edit-assignees" />
+            <mat-icon (click)="toggleEditMode()">close</mat-icon>
+            <mat-icon (click)="saveCard()">save</mat-icon>
+            <mat-icon (click)="deleteCard()">delete</mat-icon>
+          </div>
+          <div class="card-image-summary">
+            <div class="card-image">
+              <img [src]="imagePath" alt="No Image Uploaded" />
+            </div>
+            <input [(ngModel)]="card.ideaSummary" class="edit-idea-summary" />
+          </div>
+          <!-- ... other editable fields ... -->
+        </div>
+        </div>
+  </mat-card>
+  
